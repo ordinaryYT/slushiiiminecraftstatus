@@ -42,9 +42,9 @@ async def check_server_status():
     while not bot.is_closed():
         try:
             status = await server.async_status()
-            print(f"🟢 Bedrock Server is ONLINE with {status.players_online} players.")
+            print(f"Minecraft server is ONLINE with {status.players_online} players.")
             if last_status is not True:
-                await channel.send(f"🟢 Bedrock server is ONLINE with {status.players_online} players.")
+                await channel.send(f"Minecraft server is ONLINE with {status.players_online} players.")
                 last_status = True
         except Exception as e:
             print(f"🔴 Server check failed: {e}")
