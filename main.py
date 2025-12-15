@@ -47,9 +47,9 @@ async def check_server_status():
                 await channel.send(f"Minecraft server is ONLINE with {status.players_online} players.")
                 last_status = True
         except Exception as e:
-            print(f"🔴 Server check failed: {e}")
+            print(f" Server check failed: {e}")
             if last_status is not False:
-                await channel.send("🔴 Bedrock server is OFFLINE.")
+                await channel.send("Minecraft server is OFFLINE.")
                 last_status = False
 
         await asyncio.sleep(CHECK_INTERVAL)
